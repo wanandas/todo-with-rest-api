@@ -5,7 +5,6 @@ import { Box } from "../../uikit";
 import { SCREEN } from "../../utils/SCREEN";
 
 export default function TodoPage({ token }: { token: string }) {
-  console.log(token);
   return (
     <PageContainer>
       <ContentContainer>

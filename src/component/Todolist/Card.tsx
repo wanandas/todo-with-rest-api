@@ -22,7 +22,6 @@ export function Card({
   }) => Promise<void>;
 }) {
   const [item, setItem] = useState<ITodoState>(todo);
-  console.log(item);
   return (
     <CardContainer>
       <CardDeletebtn

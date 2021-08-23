@@ -49,12 +49,16 @@ export function LoginPage({
           <Button
             type="submit"
             onClick={async () => {
-              const [data, err] = await postLogin({ user });
-              if (data) {
-                setToken(data.token);
-                history.push("/");
+              if (user.password === "" || user.username === "") {
+                alert(`need input username or password`);
+              } else {
+                const [data, err] = await postLogin({ user });
+                if (data) {
+                  setToken(data.token);
+                  history.push("/");
+                }
+                if (err) return alert(err.message);
               }
-              if (err) return alert(err.message);
             }}
           >
             Login

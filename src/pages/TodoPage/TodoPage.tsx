@@ -4,7 +4,7 @@ import { Todolist } from "../../component/Todolist/TodoList";
 import { Box } from "../../uikit";
 import { SCREEN } from "../../utils/SCREEN";
 
-export default function TodoPage({ token }: { token: string }) {
+export default function TodoPage() {
   return (
     <PageContainer>
       <ContentContainer>

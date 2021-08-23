@@ -25,7 +25,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          {token ? <TodoPage token={token} /> : <Redirect to="/login" />}
+          {token ? <TodoPage /> : <Redirect to="/login" />}
         </Route>
         <Route exact path="/login">
           {!token ? <LoginPage setToken={setToken} /> : <Redirect to="/" />}
